@@ -1,6 +1,11 @@
+import { helloWorld, goodBye } from "../src";
 
-describe('testing index file', () => {
-    test('double function', () => {
-        expect(10).toBe(10);
+describe('Happyy flow', () => {
+    test('Hello', () => {
+        expect(helloWorld()).toBe('Hello World from my example modern npm package!');
+    });
+
+    test('Goodbye', () => {
+        expect(goodBye()).toBe('Goodbye from my example modern npm package!');
     });
 });
