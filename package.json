@@ -1,0 +1,60 @@
+{
+  "name": "@flauzino/say-mineiro",
+  "version": "0.0.1",
+  "description": "Say mineiro package",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/types/index.d.ts",
+        "default": "./lib/esm/index.mjs"
+      },
+      "require": {
+        "types": "./lib/cjs/types/index.d.ts",
+        "default": "./lib/cjs/index.js"
+      }
+    }
+  },
+  "types": "./lib/cjs/types/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "clean": "del-cli ./lib",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./configs/tsconfig.esm.json && move-file lib/esm/index.js lib/esm/index.mjs",
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "test": "mocha",
+    "semantic-release": "semantic-release",
+    "prepack": "npm run build"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheusflauzino/say-mineiro.git"
+  },
+  "keywords": [
+    "npm",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Matheus Flauzino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheusflauzino/say-mineiro/issues"
+  },
+  "homepage": "https://github.com/matheusflauzino/say-mineiro#readme",
+  "devDependencies": {
+    "del-cli": "^5.1.0",
+    "semantic-release": "^22.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
