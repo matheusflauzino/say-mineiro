@@ -1,11 +1,11 @@
-import { helloWorld, goodBye } from "../src";
+import { random, all } from "../src";
 
-describe('Happyy flow', () => {
-    test('Hello', () => {
-        expect(helloWorld()).toBe('Hello World from my example modern npm package!');
+describe('Happy flow', () => {
+    test('get all dialects', () => {
+        expect(all().length).toBe(18);
     });
 
-    test('Goodbye', () => {
-        expect(goodBye()).toBe('Goodbye from my example modern npm package!');
+    test('get random dialects', () => {
+        expect(random()).toEqual(expect.any(String));
     });
 });

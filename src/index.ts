@@ -1,14 +1,17 @@
-export function helloWorld() {
-    const message = 'Hello World from my example modern npm package!';
-    return message;
+const dialects = require("./dialects.json");
+
+
+
+export function all() {
+    return dialects;
 }
 
-export function goodBye() {
-    const message = 'Goodbye from my example modern npm package!';
-    return message;
+export function random() {
+    return dialects[Math.floor(Math.random() * dialects.length)];
 }
+
 
 export default {
-    helloWorld,
-    goodBye,
+    all,
+    random,
 };
