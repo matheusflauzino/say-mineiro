@@ -1,9 +1,8 @@
 {
   "name": "@matheusflauzino/say-mineiro",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Say mineiro package example",
   "exports": {
-    ".": {
       "import": {
         "types": "./lib/esm/types/index.d.ts",
         "default": "./lib/esm/index.mjs"
@@ -12,7 +11,6 @@
         "types": "./lib/cjs/types/index.d.ts",
         "default": "./lib/cjs/index.js"
       }
-    }
   },
   "types": "./lib/cjs/types/index.d.ts",
   "main": "./lib/cjs/index.js",
