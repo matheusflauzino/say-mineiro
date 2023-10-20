@@ -1,7 +1,5 @@
 const dialects = require("./dialects.json");
 
-
-
 export function all() {
     return dialects;
 }
