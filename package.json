@@ -1,6 +1,6 @@
 {
   "name": "@matheusflauzino/say-mineiro",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Say mineiro package example",
   "exports": {
       "import": {
